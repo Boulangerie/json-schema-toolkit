@@ -2,11 +2,11 @@ import { Component, OnInit } from '@angular/core';
 
 @Component({
   moduleId: module.id,
-  selector: 'app-input-viewer',
-  templateUrl: 'input-viewer.component.html',
-  styleUrls: ['input-viewer.component.css']
+  selector: 'app-input-schema',
+  templateUrl: 'input-schema.component.html',
+  styleUrls: ['input-schema.component.css']
 })
-export class InputViewerComponent implements OnInit {
+export class InputSchemaComponent implements OnInit {
 
   public schema: any
 
@@ -14,7 +14,7 @@ export class InputViewerComponent implements OnInit {
 
   }
 
-  public $onInit() {
+  public ngOnInit() {
 
   }
 
