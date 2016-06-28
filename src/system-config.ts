@@ -17,6 +17,7 @@ const packages: any = {
 /** Material2 packages configuration. */
 const materialPkgs:string[] = [
   'core',
+  'card',
   'button',
   'toolbar',
   'grid-list',
