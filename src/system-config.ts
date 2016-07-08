@@ -7,12 +7,13 @@
  **********************************************************************************************/
 /** Map relative paths to URLs. */
 const map: any = {
-  '@angular2-material': 'vendor/@angular2-material'
-};
+  '@angular2-material': 'vendor/@angular2-material',
+  'lodash': 'vendor/lodash/lodash.js'
+}
 
 /** User packages configuration. */
 const packages: any = {
-};
+}
 
 /** Material2 packages configuration. */
 const materialPkgs:string[] = [
@@ -22,11 +23,11 @@ const materialPkgs:string[] = [
   'toolbar',
   'grid-list',
   'list',
-];
+]
 
 materialPkgs.forEach((pkg) => {
-  packages[`@angular2-material/${pkg}`] = {main: `${pkg}.js`};
-});
+  packages[`@angular2-material/${pkg}`] = {main: `${pkg}.js`}
+})
 ////////////////////////////////////////////////////////////////////////////////////////////////
 /***********************************************************************************************
  * Everything underneath this line is managed by the CLI.
@@ -49,15 +50,15 @@ const barrels: string[] = [
   'app/shared',
   'app/viewer',
   /** @cli-barrel */
-];
+]
 
-const cliSystemConfigPackages: any = {};
+const cliSystemConfigPackages: any = {}
 barrels.forEach((barrelName: string) => {
-  cliSystemConfigPackages[barrelName] = { main: 'index' };
-});
+  cliSystemConfigPackages[barrelName] = { main: 'index' }
+})
 
 /** Type declaration for ambient System. */
-declare var System: any;
+declare var System: any
 
 // Apply the CLI SystemJS configuration.
 System.config({
@@ -67,7 +68,7 @@ System.config({
     'main': 'main.js'
   },
   packages: cliSystemConfigPackages
-});
+})
 
 // Apply the user's configuration.
-System.config({ map, packages });
+System.config({ map, packages })

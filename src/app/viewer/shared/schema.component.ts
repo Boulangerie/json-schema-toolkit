@@ -1,5 +1,6 @@
-import { Component, Input } from '@angular/core';
-import { MD_LIST_DIRECTIVES } from '@angular2-material/list';
+import { Component, Input } from '@angular/core'
+import { MD_LIST_DIRECTIVES } from '@angular2-material/list'
+import { IParsedSchema } from "../../shared/schema/parsers/v3.parser"
 
 @Component({
   moduleId: module.id,
@@ -8,7 +9,7 @@ import { MD_LIST_DIRECTIVES } from '@angular2-material/list';
   directives: [MD_LIST_DIRECTIVES]
 })
 export class SchemaComponent {
-  @Input() schema: Object
+  @Input() schema: IParsedSchema
 
   public constructor() {
   }
