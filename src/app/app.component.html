@@ -1,3 +1,17 @@
-<h1>
-  {{title}}
-</h1>
+<md-toolbar [color]="color">
+  <span>{{title}}</span>
+</md-toolbar>
+
+<md-grid-list cols="2" rowHeight="1:2">
+  <md-grid-tile>
+    <md-card>
+      <app-input-schema></app-input-schema>
+    </md-card>
+  </md-grid-tile>
+  <md-grid-tile>
+    <md-card style="max-height: 100%; margin: 70px 0 0;overflow: scroll;">
+      <app-schema-list></app-schema-list>
+    </md-card>
+  </md-grid-tile>
+</md-grid-list>
+

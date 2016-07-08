@@ -1,21 +1,20 @@
-import { Component, OnInit } from '@angular/core';
+import { Component } from '@angular/core';
+import {V3Parser} from "../../shared/schema/parsers/v3.parser";
 
 @Component({
   moduleId: module.id,
   selector: 'app-input-schema',
-  templateUrl: 'input-schema.component.html',
-  styleUrls: ['input-schema.component.css']
+  templateUrl: 'input-schema.component.html'
 })
-export class InputSchemaComponent implements OnInit {
+export class InputSchemaComponent {
 
-  public schema: any
+  public rawSchema: string
 
-  public constructor() {
-
+  public constructor(public v3Parser: V3Parser) {
   }
 
-  public ngOnInit() {
-
+  public parseSchemas(){
+    this.v3Parser.parse(this.rawSchema)
   }
 
 }
