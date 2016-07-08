@@ -5,9 +5,24 @@
  * User Configuration.
  **********************************************************************************************/
 /** Map relative paths to URLs. */
-var map = {};
+var map = {
+    '@angular2-material': 'vendor/@angular2-material',
+    'lodash': 'vendor/lodash/lodash.js'
+};
 /** User packages configuration. */
 var packages = {};
+/** Material2 packages configuration. */
+var materialPkgs = [
+    'core',
+    'card',
+    'button',
+    'toolbar',
+    'grid-list',
+    'list',
+];
+materialPkgs.forEach(function (pkg) {
+    packages[("@angular2-material/" + pkg)] = { main: pkg + ".js" };
+});
 ////////////////////////////////////////////////////////////////////////////////////////////////
 /***********************************************************************************************
  * Everything underneath this line is managed by the CLI.
