@@ -1,4 +1,3 @@
-import * as _ from 'lodash'
 import { Injectable } from '@angular/core'
 import { BehaviorSubject } from 'rxjs/BehaviorSubject'
 
@@ -10,10 +9,11 @@ export class V3Parser {
   }
 
   public parse(rawSchemas: string): Array<IParsedSchema> {
-    if (_.isEmpty(rawSchemas)) {
+    try {
+      return JSON.parse(rawSchemas)
+    } catch (err) {
       return []
     }
-    return JSON.parse(rawSchemas)
   }
 
 }

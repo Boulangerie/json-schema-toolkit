@@ -7,8 +7,7 @@
  **********************************************************************************************/
 /** Map relative paths to URLs. */
 const map: any = {
-  '@angular2-material': 'vendor/@angular2-material',
-  'lodash': 'vendor/lodash/lodash.js'
+  '@angular2-material': 'vendor/@angular2-material'
 }
 
 /** User packages configuration. */

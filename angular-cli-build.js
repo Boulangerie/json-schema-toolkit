@@ -16,8 +16,7 @@ module.exports = function(defaults) {
       'reflect-metadata/**/*.+(ts|js|js.map)',
       'rxjs/**/*.+(js|js.map)',
       '@angular/**/*.+(js|js.map)',
-      '@angular2-material/**/*.js',
-      'lodash/lodash.js'
+      '@angular2-material/**/*.js'
     ]
   });
 };
