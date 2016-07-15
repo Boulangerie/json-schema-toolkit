@@ -1,7 +1,7 @@
 import { Component } from '@angular/core'
 import { MD_CARD_DIRECTIVES } from '@angular2-material/card'
 import { SchemaListComponent } from './shared/schema-list.component'
-import { V3Parser, IParsedSchema } from '../shared/schema/parsers/v3.parser'
+import { V3Parser, ISchema } from '../shared/schema/parsers/v3.parser'
 
 @Component({
   moduleId: module.id,
@@ -12,13 +12,13 @@ import { V3Parser, IParsedSchema } from '../shared/schema/parsers/v3.parser'
 export class ViewerComponent {
 
   public rawSchema: string
-  public schemas: Array<IParsedSchema>
+  public schemas: Array<ISchema>
 
   private V3Parser: V3Parser
 
   public constructor(V3Parser: V3Parser) {
     this.V3Parser = V3Parser
-    this.schemas = new Array()
+    this.schemas = []
   }
 
   public onRawSchemaChange(): void {
