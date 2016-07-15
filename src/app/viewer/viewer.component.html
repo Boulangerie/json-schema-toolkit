@@ -1,4 +1,5 @@
-<p>
-  viewer works!
-  <app-input-schema></app-input-schema>
-</p>
+
+<textarea [(ngModel)]="rawSchema" (ngModelChange)="onRawSchemaChange()" name="app-schemaList" id="app-schemaList" style="width:100%" rows="10"></textarea>
+<md-card style="max-height: 100% margin: 70px 0 0overflow: scroll">
+  <app-schema-list [schemas]="schemas"></app-schema-list>
+</md-card>

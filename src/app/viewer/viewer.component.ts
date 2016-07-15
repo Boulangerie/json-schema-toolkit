@@ -1,18 +1,28 @@
-import { Component, OnInit } from '@angular/core';
-import {InputSchemaComponent} from "./shared/input-schema.component";
+import { Component } from '@angular/core'
+import { MD_CARD_DIRECTIVES } from '@angular2-material/card'
+import { SchemaListComponent } from './shared/schema-list.component'
+import { V3Parser, IParsedSchema } from '../shared/schema/parsers/v3.parser'
 
 @Component({
   moduleId: module.id,
   selector: 'app-viewer',
   templateUrl: 'viewer.component.html',
-  styleUrls: ['viewer.component.css'],
-  directives: [InputSchemaComponent],
+  directives: [SchemaListComponent, MD_CARD_DIRECTIVES],
 })
-export class ViewerComponent implements OnInit {
+export class ViewerComponent {
 
-  constructor() {}
+  public rawSchema: string
+  public schemas: Array<IParsedSchema>
 
-  ngOnInit() {
+  private V3Parser: V3Parser
+
+  public constructor(V3Parser: V3Parser) {
+    this.V3Parser = V3Parser
+    this.schemas = new Array()
+  }
+
+  public onRawSchemaChange(): void {
+    this.schemas = this.V3Parser.parse(this.rawSchema)
   }
 
 }
