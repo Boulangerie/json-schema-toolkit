@@ -6,8 +6,7 @@
  **********************************************************************************************/
 /** Map relative paths to URLs. */
 var map = {
-    '@angular2-material': 'vendor/@angular2-material',
-    'lodash': 'vendor/lodash/lodash.js'
+    '@angular2-material': 'vendor/@angular2-material'
 };
 /** User packages configuration. */
 var packages = {};
@@ -19,6 +18,7 @@ var materialPkgs = [
     'toolbar',
     'grid-list',
     'list',
+    'icon',
 ];
 materialPkgs.forEach(function (pkg) {
     packages[("@angular2-material/" + pkg)] = { main: pkg + ".js" };
