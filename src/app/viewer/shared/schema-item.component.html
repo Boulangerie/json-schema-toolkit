@@ -1,9 +1,9 @@
 <md-list-item>
-  <button md-list-avatar md-mini-fab (click)="toggleExpand()">
+  <button md-list-avatar md-mini-fab color="primary" (click)="toggleExpand()">
     <md-icon *ngIf="!isExpanded">add</md-icon>
     <md-icon *ngIf="isExpanded">remove</md-icon>
   </button>
-  <h4 md-line>{{schema.title}}</h4>
+  <h4 md-line>{{id}} - {{schema.title}}</h4>
 </md-list-item>
 <ul *ngIf="isExpanded">
   <li *ngFor="let property of schema.properties">{{property.name}}: {{property.type}}</li>

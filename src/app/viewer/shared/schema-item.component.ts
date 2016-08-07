@@ -13,6 +13,7 @@ import { ISchema } from "../../shared/schema/parsers/v3.parser"
 })
 export class SchemaItemComponent {
   @Input() schema: ISchema
+  @Input() id: number
 
   public isExpanded: boolean
 
