@@ -1,3 +1,4 @@
+<input type="text" [(ngModel)]="searchText" (ngModelChange)="filterSchemas()"/>
 <md-list>
-  <app-schema-item *ngFor="let schema of schemas let i = index" [schema]="schema" [id]="i"></app-schema-item>
+  <app-schema-item *ngFor="let schema of schemasList let i = index" [schema]="schema" [id]="i"></app-schema-item>
 </md-list>
