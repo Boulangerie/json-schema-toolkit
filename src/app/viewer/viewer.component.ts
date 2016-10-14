@@ -1,13 +1,10 @@
 import { Component } from '@angular/core'
-import { MD_CARD_DIRECTIVES } from '@angular2-material/card'
-import { SchemaListComponent } from './shared/schema-list.component'
-import { V3Parser, ISchema } from '../shared/schema/parsers/v3.parser'
+import { ISchema } from "../shared/schema/shared/interfaces";
+import { V3Parser } from "../shared/schema/parsers/v3.parser";
 
 @Component({
-  moduleId: module.id,
   selector: 'app-viewer',
-  templateUrl: 'viewer.component.html',
-  directives: [SchemaListComponent, MD_CARD_DIRECTIVES],
+  templateUrl: 'viewer.component.html'
 })
 export class ViewerComponent {
 

@@ -1,13 +1,9 @@
 import { Component, Input, OnChanges, SimpleChanges } from '@angular/core'
-import { SchemaItemComponent } from "./schema-item.component"
-import { ISchema } from "../../shared/schema/parsers/v3.parser"
-import { MD_LIST_DIRECTIVES } from '@angular2-material/list'
+import { ISchema } from "../../shared/schema/shared/interfaces";
 
 @Component({
-  moduleId: module.id,
   selector: 'app-schema-list',
-  templateUrl: 'schema-list.component.html',
-  directives: [SchemaItemComponent, MD_LIST_DIRECTIVES],
+  templateUrl: 'schema-list.component.html'
 })
 export class SchemaListComponent implements OnChanges {
   @Input() schemas: Array<ISchema>

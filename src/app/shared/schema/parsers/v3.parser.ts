@@ -1,5 +1,5 @@
 import { Injectable } from '@angular/core'
-import { BehaviorSubject } from 'rxjs/BehaviorSubject'
+import { ISchema, IProperty, ILink } from "../shared/interfaces";
 
 @Injectable()
 export class V3Parser {
@@ -21,13 +21,6 @@ export class V3Parser {
     })
   }
 
-}
-
-export interface ISchema {
-  title: string
-  url: string
-  properties: Array<IProperty>
-  links: Array<ILink>
 }
 
 class Schema implements ISchema {
@@ -64,13 +57,6 @@ class Schema implements ISchema {
 
 }
 
-export interface IProperty {
-  name: string
-  type: string
-  required: boolean
-  ref?: ISchema
-}
-
 class Property implements IProperty {
 
   public name: string
@@ -84,14 +70,6 @@ class Property implements IProperty {
     this.required = rawProperty.required || false
     // this.ref = rawProperty.ref
   }
-}
-
-export interface ILink {
-  name: string
-  url: string
-  method: string
-  ref?: ISchema
-  type?: string
 }
 
 class Link implements ILink {
