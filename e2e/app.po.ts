@@ -1,6 +1,6 @@
 import { browser, element, by } from 'protractor';
 
-export class JsonSchemaToolkitMigratedPage {
+export class JsonSchemaToolkitPage {
   navigateTo() {
     return browser.get('/');
   }

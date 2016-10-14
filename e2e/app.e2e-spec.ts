@@ -1,10 +1,10 @@
-import { JsonSchemaToolkitMigratedPage } from './app.po';
+import { JsonSchemaToolkitPage } from './app.po';
 
 describe('json-schema-toolkit-migrated App', function() {
-  let page: JsonSchemaToolkitMigratedPage;
+  let page: JsonSchemaToolkitPage;
 
   beforeEach(() => {
-    page = new JsonSchemaToolkitMigratedPage();
+    page = new JsonSchemaToolkitPage();
   });
 
   it('should display message saying app works', () => {
