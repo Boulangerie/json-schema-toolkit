@@ -16,8 +16,8 @@ export class V3Parser {
       schemas = []
     }
 
-    return schemas.map((rawSchema: any) => {
-      return new Schema(rawSchema)
+    return schemas.map((rawSchema: any, index:number) => {
+      return new Schema(rawSchema, index)
     })
   }
 
@@ -25,12 +25,14 @@ export class V3Parser {
 
 class Schema implements ISchema {
 
+  public index: number
   public title: string
   public url: string
   public properties: Array<IProperty>
   public links: Array<ILink>
 
-  public constructor(rawSchema: any) {
+  public constructor(rawSchema: any, index:number) {
+    this.index = index
     this.title = rawSchema.title
     this.url = rawSchema.pathStart
     this.properties = this.getProperties(rawSchema.properties)

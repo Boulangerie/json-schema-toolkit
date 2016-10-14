@@ -1,4 +1,5 @@
 export interface ISchema {
+  index: number
   title: string
   url: string
   properties: Array<IProperty>

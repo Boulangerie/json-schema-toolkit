@@ -7,7 +7,6 @@ import { ISchema } from "../../shared/schema/shared/interfaces";
 })
 export class SchemaItemComponent {
   @Input() schema:ISchema
-  @Input() id:number
 
   public isExpanded:boolean
 
