@@ -3,13 +3,14 @@ import { ISchema } from "../../shared/schema/shared/interfaces";
 
 @Component({
   selector: 'app-schema-list',
-  templateUrl: 'schema-list.component.html'
+  templateUrl: './schema-list.component.html'
 })
 export class SchemaListComponent implements OnChanges {
   @Input() schemas: Array<ISchema>
 
   searchText: string
   schemasList: Object[]
+
 
   public constructor() {}
 

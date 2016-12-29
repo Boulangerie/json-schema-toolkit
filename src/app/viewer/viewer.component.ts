@@ -4,7 +4,7 @@ import { V3Parser } from "../shared/schema/parsers/v3.parser";
 
 @Component({
   selector: 'app-viewer',
-  templateUrl: 'viewer.component.html'
+  templateUrl: './viewer.component.html'
 })
 export class ViewerComponent {
 

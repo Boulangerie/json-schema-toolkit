@@ -1,6 +1,6 @@
 import { JsonSchemaToolkitPage } from './app.po';
 
-describe('json-schema-toolkit-migrated App', function() {
+describe('json-schema-toolkit App', function() {
   let page: JsonSchemaToolkitPage;
 
   beforeEach(() => {

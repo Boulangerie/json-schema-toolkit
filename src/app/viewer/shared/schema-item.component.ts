@@ -3,7 +3,7 @@ import { ISchema } from "../../shared/schema/shared/interfaces";
 
 @Component({
   selector: 'app-schema-item',
-  templateUrl: 'schema-item.component.html'
+  templateUrl: './schema-item.component.html'
 })
 export class SchemaItemComponent {
   @Input() schema:ISchema
