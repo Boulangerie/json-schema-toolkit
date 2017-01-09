@@ -1,2 +1,30 @@
-/* You can add global styles to this file, and also import other style files */
-@import '~@angular/material/core/theming/prebuilt/deeppurple-amber.css';
+@import 'assets/semantic.min.css';
+
+.ui.menu .item {
+  margin-right: 1.5em;
+}
+
+form.ui.segment.form {
+  background-color: #F1F9FF;
+  margin-top: 2em;
+}
+
+form.form:after {
+  content: '';
+  display: block;
+  height: 0;
+  clear: both;
+  visibility: hidden;
+}
+
+.meta {
+  color: #9A9A9A
+}
+
+ul.ui.list li:before {
+  content: '';
+}
+
+.app-loader {
+  height: 100%;
+}
