@@ -1,10 +1,13 @@
-<md-list-item>
-  <button md-list-avatar md-mini-fab color="primary" (click)="toggleExpand()">
-    <md-icon *ngIf="!isExpanded">add</md-icon>
-    <md-icon *ngIf="isExpanded">remove</md-icon>
-  </button>
-  <h4 md-line>{{schema.index}} - {{schema.title}}</h4>
-</md-list-item>
+<div class="item">
+  <div class="content">
+    <button class="circular ui icon button" (click)="toggleExpand()">
+      <i *ngIf="!isExpanded" class="add circle icon"></i>
+      <i *ngIf="isExpanded" class="remove circle icon"></i>
+    </button>
+    <a class="header">{{schema.index}} - {{schema.title}}</a>
+  </div>
+</div>
+
 <ul *ngIf="isExpanded">
   <li *ngFor="let property of schema.properties">{{property.name}}: {{property.type}}</li>
 </ul>

@@ -1,5 +1,8 @@
+<div class="ui form">
+  <div class="field">
+    <label for="app-schemaList">Put your schema (must be a valid json)</label>
+    <textarea [(ngModel)]="rawSchema" (ngModelChange)="onRawSchemaChange()" name="app-schemaList" id="app-schemaList" rows="4"></textarea>
+  </div>
+</div>
 
-<textarea [(ngModel)]="rawSchema" (ngModelChange)="onRawSchemaChange()" name="app-schemaList" id="app-schemaList" style="width:100%" rows="10"></textarea>
-<md-card style="max-height: 100% margin: 70px 0 0overflow: scroll">
-  <app-schema-list [schemas]="schemas"></app-schema-list>
-</md-card>
+<app-schema-list [schemas]="schemas"></app-schema-list>

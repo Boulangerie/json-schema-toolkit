@@ -1,4 +1,4 @@
-@import 'assets/semantic.min.css';
+@import 'assets/semantic/semantic.min.css';
 
 .ui.menu .item {
   margin-right: 1.5em;
@@ -27,4 +27,13 @@ ul.ui.list li:before {
 
 .app-loader {
   height: 100%;
+}
+
+.ui.menu .item>img:not(.ui).main-logo {
+  margin-left: 0.5em;
+  margin-right: 0.5em;
+}
+
+.main.container {
+  margin-top: 5em;
 }
